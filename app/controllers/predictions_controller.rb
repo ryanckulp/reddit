@@ -6,11 +6,32 @@ class PredictionsController < ApplicationController
     @predictions = Prediction.all
   end
 
-  # GET /predictions/1
   def show
-    # default handle if non given by user
-    @prediction.handle = "yourhandle" if @prediction.handle.empty?
-
+    # default handle if none given by user
+      @prediction.handle = "yourhandle" if @prediction.handle.empty?
+    
+    # points
+      @p1 = Faker::Number.between(7, 25)
+      @p1r = Faker::Number.between(4, 9)
+      @p2 = Faker::Number.between(7, 25)
+      @p2r = Faker::Number.between(2, 4)
+      @p2r2 = Faker::Number.between(-12, -5)
+      @p3 = Faker::Number.between(-4, -1)
+    
+    # time posted ago
+      @t1 = Faker::Number.between(1, 4)
+      @c1 = Faker::Number.between(45, 57)
+      @c1r = Faker::Number.between(35, 42)
+      @c2 = Faker::Number.between(21, 33)
+      @c2r = Faker::Number.between(12, 18)
+      @c2r2 = Faker::Number.between(5, 10)
+      @c3 = Faker::Number.between(52, 60)
+    
+    # username
+      @u1 = Faker::Name.name.delete(' ').downcase
+      @u1r = Faker::Name.name.delete(' ').downcase
+      @u2 = Faker::Name.name.delete(' ').downcase
+      @u2r = Faker::Name.name.delete(' ').downcase
   end
 
   # GET /predictions/new

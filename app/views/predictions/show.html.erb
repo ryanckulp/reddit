@@ -1,139 +1,16 @@
-
-
 <div class="col-md-10">
-
-<!-- Link / Title -->
-  <div class="col-md-1">
-    <%= image_tag "post-rank.png" %>
-  </div>
-  <div class="col-md-11">
-    <div class="link">
-      <p class="tight"><%= @prediction.title %></p> <small>(<%= @prediction.url.sub(/^https?\:\/\//, '').sub(/^www./,'') %>)</small>
-    </div>
-    <small>submitted 2 months ago by <span class="handle"><%= @prediction.handle %></span></small>
-    <p class="actions"><a>15 comments</a> &nbsp; <a>share</a> &nbsp; <a>save</a> &nbsp; <a>hide</a> &nbsp; <a>delete</a> &nbsp; <a>nsfw</a></p>
-  </div>
-
-<!-- Compose  -->
-
-<div class="row compose">
-  <p>all 15 comments</p>
-  <hr>
-  <p class="actions">sorted by: &nbsp; <a style="text-decoration: underline">best</a> <%= image_tag "carat-down.png" %> &nbsp; &nbsp; <a>disable inbox replies (?)</a></p><br>
-  <textarea></textarea><br>
-  <button type="button" class="btn">save</button>
-</div><br>
-
-<!-- Comment One -->
-<div class="row comments">
-  <div class="col-md-1">
-    <%= image_tag "up-down.jpg" %>
-  </div>
-  <div class="col-md-9">
-    <p class="actions"><a><span class="handle">[-] Philodoxx</span></a> &nbsp; 11 points &nbsp; 2 months ago</p>
-    <div class="comment">
-      <p class="tight">
-        70/30 split? Are they kidding? Unless your idea is nip alert that's a horrible deal. Unless there's some way to "fire" Sprinkle and get the equity back there's no incentive for them to put in the effort of a real cofounder.
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-  <div class="col-md-2"></div>
-</div><div class="gap"></div>
-
-<!-- Comment One Reply -->
-<div class="row comments">
-<div class="col-md-1"></div>
-   <div class="col-md-1">
-    <%= image_tag "down-vote.jpg" %>
-  </div>
-  <div class="col-md-8">
-    <p class="actions"><a><span class="handle">Akkuma</span></a> &nbsp; 4 points &nbsp; 1 month ago</p>
-    <div class="comment">
-      <p class="tight">
-        Agreed, this is seriously a joke. They offer you pretty much nothing
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-</div><div class="gap"></div>
-
-<!-- Comment Two -->
-<div class="row comments">
-  <div class="col-md-1">
-    <%= image_tag "up-down.jpg" %>
-  </div>
-  <div class="col-md-9">
-    <p class="actions"><a><span class="handle">[-] Philodoxx</span></a> &nbsp; 11 points &nbsp; 2 months ago</p>
-    <div class="comment">
-      <p class="tight">
-        70/30 split? Are they kidding? Unless your idea is nip alert that's a horrible deal. Unless there's some way to "fire" Sprinkle and get the equity back there's no incentive for them to put in the effort of a real cofounder.
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-  <div class="col-md-2"></div>
-</div><div class="gap"></div>
-
-<!-- Comment Two Reply -->
-<div class="row comments">
-<div class="col-md-1"></div>
-   <div class="col-md-1">
-    <%= image_tag "up-vote.jpg" %>
-  </div>
-  <div class="col-md-8">
-    <p class="actions"><a><span class="handle">sympatico</span></a> &nbsp; 4 points &nbsp; 1 month ago</p>
-    <div class="comment">
-      <p class="tight">
-        Come on guys, they're just trying to get their name out there. You don't have to downvote.
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-</div><div class="gap"></div>
-
-<!-- Comment Two Reply 2 -->
-<div class="row comments">
-<div class="col-md-1"></div>
-<div class="col-md-1"></div>
-   <div class="col-md-1">
-    <%= image_tag "up-down.jpg" %>
-  </div>
-  <div class="col-md-7">
-    <p class="actions"><a><span class="handle"><%= @prediction.handle %></span></a> &nbsp; 4 points &nbsp; 1 month ago</p>
-    <div class="comment">
-      <p class="tight">
-        Thank you.
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-</div><div class="gap"></div>
-
-<!-- Comment Three -->
-<div class="row comments">
-  <div class="col-md-1">
-    <%= image_tag "up-vote.jpg" %>
-  </div>
-  <div class="col-md-9">
-    <p class="actions"><a><span class="handle">[-] Philodoxx</span></a> &nbsp; 11 points &nbsp; 2 months ago</p>
-    <div class="comment">
-      <p class="tight">
-        Hey everyone, happy to answer any questions you might have. We posted this to help other startups not make the same mistakes we did.
-      </p>      
-    </div>
-    <p class="actions"><a>permalink</a> &nbsp; <a>save</a> &nbsp; <a>report</a> &nbsp; <a>give gold</a> &nbsp; <a>reply</a></p>
-  </div>
-  <div class="col-md-2"></div>
-</div><div class="gap"></div>
-
-
-
-
-
-
+  <!-- Link / Title -->
+  <%= render 'post' %>
+  <!-- Compose  -->
+  <%= render 'compose' %>
+  <!-- Comments -->
+  <%= render 'predictions/comments/one' %>
+  <%= render 'predictions/comments/one_reply' %>
+  <%= render 'predictions/comments/two' %>
+  <%= render 'predictions/comments/two_reply' %>
+  <%= render 'predictions/comments/two_reply_two' %>
+  <%= render 'predictions/comments/three' %>
 </div>
-
-
-
-<div class="col-md-2"></div>
+<div class="col-md-2">
+  something here to share
+</div>

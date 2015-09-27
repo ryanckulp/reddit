@@ -1,0 +1,10 @@
+<div class="col-md-1">
+    <%= image_tag "post-rank.png" %>
+  </div>
+  <div class="col-md-11">
+    <div class="link">
+      <p class="tight"><%= @prediction.title %></p> <small>(<%= @prediction.url.sub(/^https?\:\/\//, '').sub(/^www./,'') %>)</small>
+    </div>
+    <small>submitted <%= @t1 %> hours ago by <span class="handle"><%= link_to @prediction.handle, "http://reddit.com/u/#{@prediction.handle}", target: "_blank" %></span></small>
+    <p class="actions"><a>6 comments</a> &nbsp; <a>share</a> &nbsp; <a>save</a> &nbsp; <a>hide</a> &nbsp; <a>delete</a> &nbsp; <a>nsfw</a></p>
+</div>
