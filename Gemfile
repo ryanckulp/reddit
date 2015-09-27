@@ -24,7 +24,7 @@ gem 'paperclip' # incomplete setup - must add resource to existing model
 gem 'aws-sdk' # configure in config/application.rb
 gem 'seed_dump' # import / export seed data from existing db (https://github.com/rroblak/seed_dump)
 gem 'figaro'
-gem 'faker'
+gem 'faker', '>= 1.5.0'
 
 group :development, :test do
   
