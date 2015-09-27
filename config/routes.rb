@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
+  root 'predictions#new'
   resources :predictions
-  devise_for :users
-  root 'pages#home'
-
 end
