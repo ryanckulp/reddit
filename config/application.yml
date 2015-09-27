@@ -1,0 +1,11 @@
+test:
+  INSERT_KEY: asdf
+  ANOTHER_KEY: fdsa
+
+development:
+  INSERT_KEY: asdf
+  ANOTHER_KEY: fdsa
+
+production:
+  INSERT_KEY: asdf
+  ANOTHER_KEY: fdsa
