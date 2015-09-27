@@ -1,13 +1,11 @@
 <%= simple_form_for(@prediction) do |f| %>
   <%= f.error_notification %>
-
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :url %>
-    <%= f.input :handle %>
+    <%= f.input :title, label: false, placeholder: "Post Title" %>
+    <%= f.input :url, label: false, placeholder: "Post URL" %>
+    <%= f.input :handle, label: false, placeholder: "johnny" %>
   </div>
-
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn-primary" %>
   </div>
 <% end %>

@@ -2,14 +2,15 @@ class PredictionsController < ApplicationController
   before_action :set_prediction, only: [:show, :edit, :update, :destroy]
 
   # GET /predictions
-  # GET /predictions.json
   def index
     @predictions = Prediction.all
   end
 
   # GET /predictions/1
-  # GET /predictions/1.json
   def show
+    # default handle if non given by user
+    @prediction.handle = "yourhandle" if @prediction.handle.empty?
+
   end
 
   # GET /predictions/new
@@ -22,7 +23,6 @@ class PredictionsController < ApplicationController
   end
 
   # POST /predictions
-  # POST /predictions.json
   def create
     @prediction = Prediction.new(prediction_params)
 
@@ -38,7 +38,6 @@ class PredictionsController < ApplicationController
   end
 
   # PATCH/PUT /predictions/1
-  # PATCH/PUT /predictions/1.json
   def update
     respond_to do |format|
       if @prediction.update(prediction_params)
@@ -52,7 +51,6 @@ class PredictionsController < ApplicationController
   end
 
   # DELETE /predictions/1
-  # DELETE /predictions/1.json
   def destroy
     @prediction.destroy
     respond_to do |format|

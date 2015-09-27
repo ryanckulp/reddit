@@ -1,3 +1,5 @@
+
+
 <div class="col-md-10">
 
 <!-- Link / Title -->
@@ -6,9 +8,9 @@
   </div>
   <div class="col-md-11">
     <div class="link">
-      <p class="tight">Camp - all expenses paid trip to build a side project</p> <small>(sprinklecamp.com)</small>
+      <p class="tight"><%= @prediction.title %></p> <small>(<%= @prediction.url.sub(/^https?\:\/\//, '').sub(/^www./,'') %>)</small>
     </div>
-    <small>submitted 2 months ago by <span class="handle">ryanckulp</span></small>
+    <small>submitted 2 months ago by <span class="handle"><%= @prediction.handle %></span></small>
     <p class="actions"><a>15 comments</a> &nbsp; <a>share</a> &nbsp; <a>save</a> &nbsp; <a>hide</a> &nbsp; <a>delete</a> &nbsp; <a>nsfw</a></p>
   </div>
 
@@ -98,7 +100,7 @@
     <%= image_tag "up-down.jpg" %>
   </div>
   <div class="col-md-7">
-    <p class="actions"><a><span class="handle">yourhandle</span></a> &nbsp; 4 points &nbsp; 1 month ago</p>
+    <p class="actions"><a><span class="handle"><%= @prediction.handle %></span></a> &nbsp; 4 points &nbsp; 1 month ago</p>
     <div class="comment">
       <p class="tight">
         Thank you.
