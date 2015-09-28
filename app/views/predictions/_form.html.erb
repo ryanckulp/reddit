@@ -1,9 +1,9 @@
 <%= simple_form_for(@prediction) do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
-    <%= f.input :title, label: false, placeholder: "Post Title" %>
-    <%= f.input :url, label: false, placeholder: "Post URL" %>
-    <%= f.input :handle, label: false, placeholder: "johnny" %>
+    <%= f.input :title, label: false, placeholder: "post title" %>
+    <%= f.input :url, label: false, placeholder: "post url" %>
+    <%= f.input :handle, label: false, placeholder: "reddit username (optional)" %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, value: "optimize", class: "btn-primary" %>

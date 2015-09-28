@@ -1,6 +1,6 @@
 body {font-family: 'verdana', 'arial', 'helvetica'}
 img {cursor: pointer}
-.container {width: 100%;}
+.container {width: 100%; min-height: 550px}
 .col-md-10 {padding-left: 0;}
 .col-md-11 {width: 97.6667%; padding-left: 0;}
 .col-md-1 {width: 2.3333%; padding-left: 0}
@@ -37,6 +37,18 @@ textarea {width: 500px; height: 100px;}
 .comments p {margin-bottom: 3px;}
 .comment p {font-size: 14px; color: #212121;}
 .gap {height: 7px;}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+textarea {width: 275px; height: 75px;}
+.container {padding-left: 8px; padding-right: 8px; min-height: 460px}
+.col-md-11 {padding-left: 2px; padding-right: 0; display: inline-block; width: 92.6667%;}
+.col-md-1 {vertical-align: top; display: inline-block;}
+.col-md-9 {display: inline-block; padding-right: 0; width: 93%;}
+.col-md-8 {display: inline-block; padding-right: 0; width: 85%;}
+.col-md-7 {display: inline-block; padding-right: 0; width: 80%;}
+}
 
 
 
